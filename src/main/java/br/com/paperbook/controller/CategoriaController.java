@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,14 +29,13 @@ public class CategoriaController {
 	public Optional<Categoria> buscar(@PathVariable Integer id) {
 		return catRepo.findById(id);
 	}
-	@GetMapping("/cadastrar")
-//	@PostMapping("/cadastrar")
+	@PostMapping("/cadastrar")
 	public String cadastrar(@RequestBody Categoria cat) {
 		catRepo.save(cat);
 		return "Categoria cadastrada";
 	}
 	
-	@GetMapping("/atualizar")
+	@PutMapping("/atualizar/{id}")
 	public String atualizar(@PathVariable Integer id,@RequestBody Categoria cat) {
 		Optional<Categoria> ct = catRepo.findById(id);
 		String msg = "";
