@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.paperbook.domain.Categoria;
 import br.com.paperbook.repository.CategoriaRepository;
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/v1/categoria")
 public class CategoriaController {
@@ -50,7 +52,7 @@ public class CategoriaController {
 		}
 		return msg;
 	}
-
+	@DeleteMapping("/apagar/{id}")
 	public String apagar(@PathVariable Integer id,@RequestBody  Categoria cat) {
 		catRepo.deleteById(id);
 		return "Usuario deletado";
