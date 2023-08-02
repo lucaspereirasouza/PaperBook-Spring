@@ -6,21 +6,44 @@ let btncadastrar = document.getElementById("btncadastrar");
 //realizar o cadastro quando o botão for clicado
 
 btncadastrar.onclick = () => {
-    fetch("http://10.26.44.35:5000/api/v1/categoria/cadastrar", {
-        method: "POST",
-        headers: {
-            "accept": "application/json",
-            "content-type": "application/json"
-
-        },
-        body: JSON.stringify({
-            nomecategoria: nome.value,
-            descricaocategoria: descricao.value
+    if(btncadastrar.value == "Atualizar"){
+        fetch("http://10.26.44.35:5000/api/v1/categoria/atualizar"+idcategoria ,{
+            method:"PUT",
+            headers:{
+                "accept": "application/json",
+                "content-type": "application/json"
+            },
+            body:JSON.stringify({
+                nomecategoria:nome.value,
+                descricaocategoria:descricao.value,
         })
+        
     })
-        .then((response) => response.json())
-        .then((dados) => alert(dados))
-        .catch((error) => console.error(error))
+    .then((response)=>response.json())
+    .then((dados)=>alert("Atualizado"))
+    .catch((error)=>console.error(error))
+    alert("A categoria foi atualizada, atualize a pagina.")
+    window.location.reload
+    
+    }else{
+        fetch("http://10.26.44.35:5000/api/v1/categoria/cadastrar", {
+            method: "POST",
+            headers: {
+                "accept": "application/json",
+                "content-type": "application/json"
+
+            },
+            body: JSON.stringify({
+                nomecategoria: nome.value,
+                descricaocategoria: descricao.value
+            })
+        })
+            .then((response) => response.json())
+            .then((dados) => alert(dados))
+            .catch((error) => console.error(error))
+            alert("A categoria foi criada. Atualize a pagina.")
+            windows.location.reload()
+    }
 }
 
 function exibirCategorias() {
@@ -50,10 +73,13 @@ function exibirCategorias() {
 
 }
 
-function atualizar(id, nome, desc) {
+function atualizar(id, categoria, desc) {
     // depois fazer
-    nome.value = cat;
+    categoria.value = cat;
     descricao.value = desc;
+    descricao.value = desc
+
+    document.getElementById("btncadastrar").value="Atualizar"
     console.log(id);
 }
 function apagar(id) {
