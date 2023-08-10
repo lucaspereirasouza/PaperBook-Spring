@@ -22,7 +22,7 @@ import jakarta.persistence.Entity;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api/v1/categoria")
+@RequestMapping("/api/v1/cliente")
 public class ClienteController {
 	
 	@Autowired
@@ -45,15 +45,6 @@ public class ClienteController {
 	
 	@PutMapping("/Atualizar/{id}")
 	public String Atualizar(@PathVariable Integer id, @RequestBody Cliente cli) {
-//		
-//		Optional<Categoria> ct = catRepo.findById(id);
-//		String msg = "";
-//		if (ct.isPresent()) {
-//			Categoria c = new Categoria();
-//			c.setIdcategoria(id);d
-//			c.setNomecategoria(cat.getNomecategoria());
-//			c.setDescricaocategoria(cat.getDescricaocategoria())
-//		
 		String msg = "";
 		Optional<Cliente> opcli = clienterepo.findById(id);
 		if (opcli.isPresent()) {
