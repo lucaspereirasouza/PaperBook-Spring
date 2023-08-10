@@ -53,7 +53,7 @@ public class CategoriaController {
 		return msg;
 	}
 	@DeleteMapping("/apagar/{id}")
-	public String apagar(@PathVariable Integer id,@RequestBody  Categoria cat) {
+	public String apagar(@PathVariable Integer id,@RequestBody Categoria cat) {
 		catRepo.deleteById(id);
 		return "Usuario deletado";
 	}

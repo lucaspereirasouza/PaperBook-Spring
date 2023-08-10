@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="exibircargos()">
+    <div class="conteiner">
+        <header class="header">
+            <h1><span>Cargos</span></h1>
+        </header>
+        <h1>Categorias</h1>
+        <section id="cad">
+            <form onsubmit="return false">
+                <input type="text" id="titulo" placeholder="Titulo do cargo">
+                <input type="text" id="salario" placeholder="Salario"><br><br>
+                <input type="text" id="beneficio" placeholder="Beneficio">
+                <input type="text" id="cargahorario" placeholder="CargaHorario">
+
+                <input type="submit" value="Cadastrar" id="btncadastrar">
+            </form>
+        </section>
+        
+        <br>
+        <hr>
+        <br>
+
+        <section id="display">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Titulo do Cargo</th>
+                        <th>Salario</th>
+                        <th>Beneficio</th>
+                        <th>CargaHoraria</th>
+                        <th>Atualizar</th>
+                        <th>Apagar</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+    
+        </section>
+        <script src="./js/script.js"></script>
+</body>
+</html>
