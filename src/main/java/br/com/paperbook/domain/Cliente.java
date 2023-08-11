@@ -1,12 +1,16 @@
 package br.com.paperbook.domain;
 
 import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Cliente {
@@ -27,28 +31,30 @@ public class Cliente {
 	@Column(length = 15, nullable = false)
 	private String rgcliente;
 	
-	
-	@Column(nullable = false)
-	private Integer idendereco;
-	@Column(nullable = false)
-	private Integer idcontato;
-	@Column(nullable = false)
-	private Integer idusuario;
+	@ManyToOne
+	@JoinColumn(name="idendereco")
+	private Endereco endereco;
+	@OneToOne
+	@JoinColumn(name="idcontato")
+	private Contato contato;
+	@OneToOne
+	@JoinColumn(name="idusuario")
+	private Usuario usuario;
 	
 	public Cliente() {}
 
 	public Cliente(Integer idcliente, String nomecliente, String cpfcliente, String sexocliente,
-			Date datanascimentocliente, String rgcliente, Integer idendereco, Integer idcontato, Integer idusuario) {
-	
+			Date datanascimentocliente, String rgcliente, Endereco endereco, Contato contato,
+			Usuario usuario) {
 		this.idcliente = idcliente;
 		this.nomecliente = nomecliente;
 		this.cpfcliente = cpfcliente;
 		this.sexocliente = sexocliente;
 		this.datanascimentocliente = datanascimentocliente;
 		this.rgcliente = rgcliente;
-		this.idendereco = idendereco;
-		this.idcontato = idcontato;
-		this.idusuario = idusuario;
+		this.endereco = endereco;
+		this.contato = contato;
+		this.usuario = usuario;
 	}
 
 	public Integer getIdcliente() {
@@ -99,29 +105,30 @@ public class Cliente {
 		this.rgcliente = rgcliente;
 	}
 
-	public Integer getIdendereco() {
-		return idendereco;
+	public Endereco getEndereco() {
+		return endereco;
 	}
 
-	public void setIdendereco(Integer idendereco) {
-		this.idendereco = idendereco;
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
-	public Integer getIdcontato() {
-		return idcontato;
+	public Contato getContato() {
+		return contato;
 	}
 
-	public void setIdcontato(Integer idcontato) {
-		this.idcontato = idcontato;
+	public void setContato(Contato contato) {
+		this.contato = contato;
 	}
 
-	public Integer getIdusuario() {
-		return idusuario;
+	public Usuario getUsuario() {
+		return usuario;
 	}
 
-	public void setIdusuario(Integer idusuario) {
-		this.idusuario = idusuario;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
+
 	
 	
 	
