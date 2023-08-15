@@ -37,8 +37,8 @@ function info(id){
     RG: ${rs.rgcliente} \n
     Sexo: ${rs.sexocliente}
     Data de nascimento: ${rs.datanascimentocliente}
-    Endereco: ${rs.idendereco.logradouro}
-    numero:${rs.idendereco.numero} `; 
+    Endereco: ${rs.endereco.logradouro}
+    numero:${rs.endereco.numero} `; 
     alert(dados);
   })
   .catch((err)=>console.error(err));

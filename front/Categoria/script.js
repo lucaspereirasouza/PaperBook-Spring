@@ -83,7 +83,7 @@ function atualizar(id, categoria, desc) {
     console.log(id);
 }
 function apagar(id) {
-    fetch("http://10.26.45.49:5000/api/v1/categoria/apagar" + id, { method: "DELETE" })
+    fetch("http://10.26.45.49:5000/api/v1/categoria/apagar/" + id, { method: "DELETE" })
         .then((response) => response.json())
         .then((dados) => {
 
@@ -92,5 +92,5 @@ function apagar(id) {
 
     alert("A categoria foi apagada. Atualize a pagina");
     alert(id);
-    window.location.reload();
+    // window.location.reload();
 }

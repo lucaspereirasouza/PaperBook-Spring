@@ -14,11 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.paperbook.domain.Categoria;
 import br.com.paperbook.domain.Cliente;
 
 import br.com.paperbook.repository.ClienteRepository;
-import jakarta.persistence.Entity;
 
 @CrossOrigin(origins = "*")
 @RestController

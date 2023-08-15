@@ -16,7 +16,7 @@ public class Pedido {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idPedido;
+	private Integer idpedido;
 	
 	@Column(length = 45,nullable = false)
 	private String loja;
@@ -38,16 +38,17 @@ public class Pedido {
 	
 //	@OneToMany
 	@JoinColumn(name="idfuncionario")
-	private int funcionario;
+	private Funcionario funcionario;
 //	@ManyToOne
 	@JoinColumn(name="idcliente")
-	private int cliente;
+	private Cliente cliente;
 	
 	public Pedido() {}
-	public Pedido(Integer idPedido, String loja, String unidadeloja, String numeroprotocolo, String formapagamento,
-			String parcelas, Double valorpacela, Double valortotalpedido, Date datahora, int idfuncionario,
-			int idcliente) {
-		this.idPedido = idPedido;
+
+	public Pedido(Integer idpedido, String loja, String unidadeloja, String numeroprotocolo, String formapagamento,
+			String parcelas, Double valorpacela, Double valortotalpedido, Date datahora, Funcionario funcionario,
+			Cliente cliente) {
+		this.idpedido = idpedido;
 		this.loja = loja;
 		this.unidadeloja = unidadeloja;
 		this.numeroprotocolo = numeroprotocolo;
@@ -56,74 +57,97 @@ public class Pedido {
 		this.valorpacela = valorpacela;
 		this.valortotalpedido = valortotalpedido;
 		this.datahora = datahora;
-		this.funcionario = idfuncionario;
-		this.cliente = idcliente;
+		this.funcionario = funcionario;
+		this.cliente = cliente;
 	}
-	public Integer getIdPedido() {
-		return idPedido;
+
+	public Integer getIdpedido() {
+		return idpedido;
 	}
-	public void setIdPedido(Integer idPedido) {
-		this.idPedido = idPedido;
+
+	public void setIdpedido(Integer idpedido) {
+		this.idpedido = idpedido;
 	}
+
 	public String getLoja() {
 		return loja;
 	}
+
 	public void setLoja(String loja) {
 		this.loja = loja;
 	}
+
 	public String getUnidadeloja() {
 		return unidadeloja;
 	}
+
 	public void setUnidadeloja(String unidadeloja) {
 		this.unidadeloja = unidadeloja;
 	}
+
 	public String getNumeroprotocolo() {
 		return numeroprotocolo;
 	}
+
 	public void setNumeroprotocolo(String numeroprotocolo) {
 		this.numeroprotocolo = numeroprotocolo;
 	}
+
 	public String getFormapagamento() {
 		return formapagamento;
 	}
+
 	public void setFormapagamento(String formapagamento) {
 		this.formapagamento = formapagamento;
 	}
+
 	public String getParcelas() {
 		return parcelas;
 	}
+
 	public void setParcelas(String parcelas) {
 		this.parcelas = parcelas;
 	}
+
 	public Double getValorpacela() {
 		return valorpacela;
 	}
+
 	public void setValorpacela(Double valorpacela) {
 		this.valorpacela = valorpacela;
 	}
+
 	public Double getValortotalpedido() {
 		return valortotalpedido;
 	}
+
 	public void setValortotalpedido(Double valortotalpedido) {
 		this.valortotalpedido = valortotalpedido;
 	}
+
 	public Date getDatahora() {
 		return datahora;
 	}
+
 	public void setDatahora(Date datahora) {
 		this.datahora = datahora;
 	}
-	public int getIdfuncionario() {
+
+	public Funcionario getFuncionario() {
 		return funcionario;
 	}
-	public void setIdfuncionario(int idfuncionario) {
-		this.funcionario = idfuncionario;
+
+	public void setFuncionario(Funcionario funcionario) {
+		this.funcionario = funcionario;
 	}
-	public int getIdcliente() {
+
+	public Cliente getCliente() {
 		return cliente;
 	}
-	public void setIdcliente(int idcliente) {
-		this.cliente = idcliente;
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
+	
 	
 }

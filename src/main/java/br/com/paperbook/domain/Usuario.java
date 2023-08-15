@@ -16,7 +16,7 @@ public class Usuario {
 	@Column(length = 255, nullable=false)
 	private String senha;
 	@Column(length = 45, nullable=false)
-	private String nivelAcesso;
+	private String nivelacesso;
 	
 	public Usuario() {}
 	
@@ -24,7 +24,7 @@ public class Usuario {
 		this.idusuario = idusuario;
 		this.login = login;
 		this.senha = senha;
-		this.nivelAcesso = nivelAcesso;
+		this.nivelacesso = nivelAcesso;
 	}
 
 	public Integer getIdusuario() {
@@ -52,11 +52,11 @@ public class Usuario {
 	}
 
 	public String getNivelAcesso() {
-		return nivelAcesso;
+		return nivelacesso;
 	}
 
 	public void setNivelAcesso(String nivelAcesso) {
-		this.nivelAcesso = nivelAcesso;
+		this.nivelacesso = nivelAcesso;
 	}
 	
 	

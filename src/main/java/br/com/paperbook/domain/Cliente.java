@@ -1,7 +1,6 @@
 package br.com.paperbook.domain;
 
 import java.sql.Date;
-import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -44,8 +43,7 @@ public class Cliente {
 	public Cliente() {}
 
 	public Cliente(Integer idcliente, String nomecliente, String cpfcliente, String sexocliente,
-			Date datanascimentocliente, String rgcliente, Endereco endereco, Contato contato,
-			Usuario usuario) {
+			Date datanascimentocliente, String rgcliente, Endereco endereco, Contato contato, Usuario usuario) {
 		this.idcliente = idcliente;
 		this.nomecliente = nomecliente;
 		this.cpfcliente = cpfcliente;
@@ -129,8 +127,5 @@ public class Cliente {
 		this.usuario = usuario;
 	}
 
-	
-	
-	
 	
 }
