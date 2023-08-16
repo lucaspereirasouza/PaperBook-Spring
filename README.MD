@@ -13,10 +13,12 @@ docker run --name MySQLSpringBoot -e MYSQL_ROOT_PASSWORD=123@senac -p 3306:3306 
 listar todos os containers:
 -a, --all Show all containers
 Docker ps -a
-![Importação de data](/imgREADME/DataImport.png)
 
+## Importação de data
+![Importação de data](/imgREADME/DataImport.png)
 ![Importação de data parte 2:](/imgREADME/DataImport2.png)
 
+## Diagrama
 ![Diagrama do banco](/imgREADME/DiagramaBanco.png)
 
 #### Caso voce tenha a versão desktop, utilize o arquivo make localizado [Em progresso...]
