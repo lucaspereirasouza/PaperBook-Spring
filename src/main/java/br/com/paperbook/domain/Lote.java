@@ -13,7 +13,7 @@ public class Lote {
 	@Column(length = 10,nullable = false)
 	private String numerolote;
 	@Column(nullable = false)
-	private Date date;
+	private Date fabricacao;
 	@Column(nullable = false)
 	private Date validade;
 	
@@ -22,7 +22,7 @@ public class Lote {
 	public Lote(Integer idlote, String numerolote, Date date, Date validade) {
 		this.idlote = idlote;
 		this.numerolote = numerolote;
-		this.date = date;
+		this.fabricacao = date;
 		this.validade = validade;
 	}
 
@@ -43,11 +43,11 @@ public class Lote {
 	}
 
 	public Date getDate() {
-		return date;
+		return fabricacao;
 	}
 
 	public void setDate(Date date) {
-		this.date = date;
+		this.fabricacao = date;
 	}
 
 	public Date getValidade() {

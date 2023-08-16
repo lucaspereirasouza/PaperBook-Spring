@@ -19,7 +19,7 @@ public class Cargo {
 	@Column(length = 100,nullable=false)
 	private String beneficio;
 	@Column(length = 50,nullable=false)
-	private String cargarhoraria;
+	private String cargahoraria;
 	
 	public Cargo() {}
 
@@ -28,7 +28,7 @@ public class Cargo {
 		this.titulocargo = titulocargo;
 		this.salario = salario;
 		this.beneficio = beneficio;
-		this.cargarhoraria = cargarhoraria;
+		this.cargahoraria = cargarhoraria;
 	}
 
 	public Integer getIdcargo() {
@@ -64,11 +64,11 @@ public class Cargo {
 	}
 
 	public String getCargarhoraria() {
-		return cargarhoraria;
+		return cargahoraria;
 	}
 
 	public void setCargarhoraria(String cargarhoraria) {
-		this.cargarhoraria = cargarhoraria;
+		this.cargahoraria = cargarhoraria;
 	}
 
 	

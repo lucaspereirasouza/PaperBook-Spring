@@ -1,6 +1,7 @@
 package br.com.paperbook.domain;
 
 import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+
 
 @Entity
 public class Pedido {
@@ -30,23 +32,23 @@ public class Pedido {
 	@Column(length = 20)
 	private String parcelas;
 	@Column(precision = 2)
-	private Double valorpacela;
+	private Double valorparcela;
 	@Column(precision = 2,nullable = false)
 	private Double valortotalpedido;
 	@Column(nullable = false)
 	private Date datahora;
-	
-//	@OneToMany
+		
+	@OneToMany
 	@JoinColumn(name="idfuncionario")
-	private Funcionario funcionario;
-//	@ManyToOne
+	private List<Funcionario> funcionario;
+	@ManyToOne
 	@JoinColumn(name="idcliente")
 	private Cliente cliente;
 	
 	public Pedido() {}
 
 	public Pedido(Integer idpedido, String loja, String unidadeloja, String numeroprotocolo, String formapagamento,
-			String parcelas, Double valorpacela, Double valortotalpedido, Date datahora, Funcionario funcionario,
+			String parcelas, Double valorpacela, Double valortotalpedido, Date datahora, List<Funcionario> funcionario,
 			Cliente cliente) {
 		this.idpedido = idpedido;
 		this.loja = loja;
@@ -54,7 +56,7 @@ public class Pedido {
 		this.numeroprotocolo = numeroprotocolo;
 		this.formapagamento = formapagamento;
 		this.parcelas = parcelas;
-		this.valorpacela = valorpacela;
+		this.valorparcela = valorpacela;
 		this.valortotalpedido = valortotalpedido;
 		this.datahora = datahora;
 		this.funcionario = funcionario;
@@ -110,11 +112,11 @@ public class Pedido {
 	}
 
 	public Double getValorpacela() {
-		return valorpacela;
+		return valorparcela;
 	}
 
 	public void setValorpacela(Double valorpacela) {
-		this.valorpacela = valorpacela;
+		this.valorparcela = valorpacela;
 	}
 
 	public Double getValortotalpedido() {
@@ -133,11 +135,11 @@ public class Pedido {
 		this.datahora = datahora;
 	}
 
-	public Funcionario getFuncionario() {
+	public List<Funcionario> getFuncionario() {
 		return funcionario;
 	}
 
-	public void setFuncionario(Funcionario funcionario) {
+	public void setFuncionario(List<Funcionario> funcionario) {
 		this.funcionario = funcionario;
 	}
 
@@ -148,6 +150,8 @@ public class Pedido {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
+
+	
 	
 	
 }
