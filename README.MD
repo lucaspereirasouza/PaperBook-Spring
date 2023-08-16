@@ -14,12 +14,12 @@ listar todos os containers:
 -a, --all Show all containers
 Docker ps -a
 
-## Importação de data (Os arquivos estão no diretório /BancoDeDados/)
+## Importação de data (Os arquivos estão no diretório /BancoDeDados/ )
 ![Importação de data](/imgREADME/DataImport.png)
 ![Importação de data parte 2:](/imgREADME/DataImport2.png)
 
 ## Diagrama
 ![Diagrama do banco](/imgREADME/DiagramaBanco.png)
 
-#### Caso voce tenha a versão desktop, utilize o arquivo make localizado [Em progresso...]
+#### Caso voce tenha a versão desktop, utilize o arquivo MAKE localizado [Em progresso...]
 
