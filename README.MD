@@ -17,7 +17,7 @@ Docker ps -a
 
 ![Importação de data parte 2:](/imgREADME/DataImport2.png)
 
-![Diagrama do banco](/imgREADME/DiagramaBanco.png.png)
+![Diagrama do banco](/imgREADME/DiagramaBanco.png)
 
 #### Caso voce tenha a versão desktop, utilize o arquivo make localizado [Em progresso...]
 
