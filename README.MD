@@ -14,7 +14,7 @@ listar todos os containers:
 -a, --all Show all containers
 Docker ps -a
 
-## Importação de data (Os arquivos estão no diretório /BancoDeDados)
+## Importação de data (Os arquivos estão no diretório /BancoDeDados/)
 ![Importação de data](/imgREADME/DataImport.png)
 ![Importação de data parte 2:](/imgREADME/DataImport2.png)
 
