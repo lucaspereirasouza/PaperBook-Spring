@@ -2,7 +2,7 @@
 ## Aplicação de cadastro de categoria fullstack com Springboot (Com utilização de docker)
 
 Progamas necessarios:
-SpringToolSuite [Fundamental]
+SpringToolSuite para eclipse [Fundamental]
 Docker/Docker Desktop [Recomendado a versão desktop]
 
 
@@ -23,3 +23,6 @@ Docker ps -a
 
 #### Caso voce tenha a versão desktop, utilize o arquivo MAKE localizado [Em progresso...]
 
+## Spring boot suite
+após a instalação do spring boot suite para eclipse importe o arquivo e configure o application.properties localizado em /src/main/resources/
+![Application.Properties](/imgREADME/applicationproperties)
