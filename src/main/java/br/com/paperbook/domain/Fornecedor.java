@@ -22,7 +22,7 @@ public class Fornecedor {
 	private String tipodeproduto;
 	
 	@ManyToOne
-	@JoinColumn(name="endereco")
+	@JoinColumn(name="idendereco")
 	private Endereco endereco;
 	@OneToOne
 	@JoinColumn(name="idcontato")
