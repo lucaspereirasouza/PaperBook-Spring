@@ -24,7 +24,7 @@ import br.com.paperbook.repository.ClienteRepository;
 public class ClienteController {
 	
 	@Autowired
-	private ClienteRepository clienterepo;
+	private ClienteRepository clienterepo;	
 	
 	@GetMapping("/listar")
 	public List<Cliente> listar() {

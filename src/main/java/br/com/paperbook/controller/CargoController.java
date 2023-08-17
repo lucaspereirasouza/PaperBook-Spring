@@ -18,7 +18,7 @@ import br.com.paperbook.repository.CargoRepository;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/api/v1/Cargo")
+@RequestMapping("/api/v1/cargo")
 public class CargoController {
 	
 	@Autowired CargoRepository cargo;

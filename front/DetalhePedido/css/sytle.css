@@ -1,0 +1,33 @@
+h1{
+    font-family: Arial;
+    text-align: center;
+    border-bottom: 1px solid darkred;
+}
+
+ul{
+    list-style: none;
+}
+
+#lstheader li{
+ display: inline-block;
+ font-weight: bold;
+ font-family: Arial;
+ width: 19%;
+ border-bottom: 1px solid silver;
+}
+
+#itempedido l1{
+    display: inline-block;
+    font-weight: bold;
+    font-family: arial;
+    width: 19%;
+}
+#lstheader {
+    padding: 10px;
+    padding-left: 90px;
+    transition: ease 1s;
+}
+#lstheader:hover{
+    cursor:pointer;
+    background-color: silver;
+}

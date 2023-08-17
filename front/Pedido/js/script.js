@@ -15,13 +15,7 @@ function carregarDados(){
                 <li>${itens.loja}</li>
                 <li>${itens.unidadeloja}</li>
                 <li>${itens.numeroprotocolo}</li>
-                <li>${itens.formapagamento}</li>
-                <li>${itens.parcelas}</li>
-                <li>${itens.valorparcela}</li>
                 <li>${itens.valortotalpedido}</li>
-                <li>${itens.datahora}</li>
-                <li>${itens.funcionario.idfuncionario}</li>
-                <li>${itens.cliente.idcliente}</li>
             </ul>
             `;
             
