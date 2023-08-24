@@ -16,11 +16,11 @@
             <img src="images/icon.png" alt="icone">
             <h2>Faça seu login</h2>
 
-            <form onsubmit="return null" id="form">
-                <input type="text" placeholder="Nome Usuário"> <br>
-                <input type="password" placeholder="Senha Usuário"> <br>
-                <input type="submit">
-                <a href="http://127.0.0.1:5500/"></a>
+            <form onsubmit="return false"id="form">
+                <input type="text" placeholder="Nome Usuário" id="usuario"> <br>
+                <input type="password" placeholder="Senha Usuário" id="senha"> <br>
+                <input type="submit" id="btnLogar" onclick="logar()">
+                <a href="http://127.0.0.1:5500/Login/Cadastrar.html">Cadastre aqui</a>
             </form>
         </div>
     </div>

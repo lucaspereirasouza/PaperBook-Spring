@@ -6,32 +6,31 @@ let btncadastrar = document.getElementById("btncadastrar");
 //realizar o cadastro quando o botão for clicado
 
 btncadastrar.onclick = () => {
-    if(btncadastrar.value == "Atualizar"){
-        fetch("http://10.26.45.49:5000/api/v1/categoria/atualizar"+idcategoria ,{
-            method:"PUT",
-            headers:{
+    if (btncadastrar.value == "Atualizar") {
+        fetch("http://10.26.45.31:5000/api/v1/categoria/atualizar" + idcategoria, {
+            method: "PUT",
+            headers: {
                 "accept": "application/json",
                 "content-type": "application/json"
             },
-            body:JSON.stringify({
-                nomecategoria:nome.value,
-                descricaocategoria:descricao.value,
+            body: JSON.stringify({
+                nomecategoria: nome.value,
+                descricaocategoria: descricao.value,
+            })
+
         })
-        
-    })
-    .then((response)=>response.json())
-    .then((dados)=>alert("Atualizado"))
-    .catch((error)=>console.error(error))
-    alert("A categoria foi atualizada, atualize a pagina.")
-    window.location.reload
-    
-    }else{
-        fetch("http://10.26.45.49:5000/api/v1/categoria/cadastrar", {
+            .then((response) => response.json())
+            .then((dados) => alert("Atualizado"))
+            .catch((error) => console.error(error))
+        alert("A categoria foi atualizada, atualize a pagina.")
+        // windows.location.reload();
+
+    } else {
+        fetch("http://10.26.45.31:5000/api/v1/categoria/cadastrar", {
             method: "POST",
             headers: {
                 "accept": "application/json",
                 "content-type": "application/json"
-
             },
             body: JSON.stringify({
                 nomecategoria: nome.value,
@@ -41,14 +40,14 @@ btncadastrar.onclick = () => {
             .then((response) => response.json())
             .then((dados) => alert(dados))
             .catch((error) => console.error(error))
-            alert("A categoria foi criada. Atualize a pagina.")
-            windows.location.reload()
+        alert("A categoria foi criada. Atualize a pagina.")
+        // windows.location.reload()
     }
 }
 
 function exibirCategorias() {
     let saida = "";
-    fetch("http://10.26.45.49:5000/api/v1/categoria/listar")
+    fetch("http://10.26.45.31:5000/api/v1/categoria/listar")
         .then((response) => response.json())
         .then((dados) => {
             dados.map((itens, ix) => {
@@ -79,11 +78,11 @@ function atualizar(id, categoria, desc) {
     descricao.value = desc;
     descricao.value = desc
 
-    document.getElementById("btncadastrar").value="Atualizar"
+    document.getElementById("btncadastrar").value = "Atualizar"
     console.log(id);
 }
 function apagar(id) {
-    fetch("http://10.26.45.49:5000/api/v1/categoria/apagar/" + id, { method: "DELETE" })
+    fetch("http://10.26.45.31:5000/api/v1/categoria/apagar/" + id, { method: "DELETE" })
         .then((response) => response.json())
         .then((dados) => {
 

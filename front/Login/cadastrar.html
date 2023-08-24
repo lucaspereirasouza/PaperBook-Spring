@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="struct">
+        <div id="img">
+            <img src="images/login.png" alt="imagem login">
+        </div>
+        <div id="form">
+            <img src="images/icon.png" alt="icone">
+            <h2>Faça seu registro</h2>
+
+            <form onsubmit="return false"id="form">
+                <input type="text" placeholder="Usuario" id="usuario"> <br>
+                <input type="text" placeholder="Login" id="login"> <br>
+                <input type="password" placeholder="Senha do Usuário" id="senha"> <br>
+                <input type="password" placeholder="Confirmar senha do usuario" id="senhaconfirmar"> <br>
+                
+                <div id="nivelacesso">   
+                    <select name="nivelacessogroup" id="nivelacessogroup">
+                        <option val="nivelAcesso">Nivel acesso</option>
+                        <option val="usuario">Usuario</option>
+                        <option val="admin">Admin</option>
+                    </select>   
+                </div>
+                
+                <input type="submit" onclick="cadastrar()" placeholder="Cadastrar" id="btnLogarCadastrar">
+            </form>
+
+              
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
