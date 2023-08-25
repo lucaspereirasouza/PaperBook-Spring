@@ -1,7 +1,7 @@
 # Paperbook [Em progresso]
 ## Aplicação de cadastro de categoria fullstack com Springboot (Com utilização de docker)
 
-Conteudos necessarios:
+Conteudo necessarios:
 SpringToolSuite para eclipse [Fundamental]
 Docker/Docker Desktop [Recomendado a versão desktop]
 
